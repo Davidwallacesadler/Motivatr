@@ -9,10 +9,24 @@
 import UIKit
 
 class GoalHomeVC: UIViewController {
+    
+    
+    @IBOutlet weak var activeGoalListContainer: UIImageView!
+    @IBOutlet weak var upcomingGoalListContainer: UIImageView!
+    
+    
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        activeGoalListContainer.blurImage()
+        upcomingGoalListContainer.blurImage()
+        
+      let MotivatrTitle = UIImage(named: "MOTIVATR")
+        navigationItem.titleView = UIImageView(image: MotivatrTitle)
+        
     }
 
 
